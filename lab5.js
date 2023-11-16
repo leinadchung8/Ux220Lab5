@@ -4,7 +4,7 @@ class CenterHtml extends HTMLElement{
     }
 }
 
-customElements.defines("x-center", CenterHtml);
+customElements.define("x-center", CenterHtml);
 
 class BlueHtml extends HTMLElement{
     connectedCallback(){
@@ -12,4 +12,12 @@ class BlueHtml extends HTMLElement{
     }
 }
 
-customElements.defines("x-blue", BlueHtml);
+customElements.define("x-blue", BlueHtml);
+
+class GreenBorderHtml extends HTMLElement{
+    connectedCallback(){
+        this.innerHTML = `<div style="border:2px solid green; padding: 10px">${this.innerHTML}</div>`;
+    }
+}
+
+customElements.define("x-green-border", GreenBorderHtml);
